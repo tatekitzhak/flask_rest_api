@@ -1,0 +1,92 @@
+
+Dockerfile*
+docker-compose*
+.dockerignore
+.git
+.gitignore
+README.md
+LICENSE
+.vscode
+Makefile
+helm-charts
+.env
+.editorconfig
+.idea
+
+*.py[cod]
+*$py.class
+.DS_Store
+*.DS_Store
+**/.DS_Store
+deepspeech-0.9.3-models.pbmm
+deepspeech-0.9.3-models.scorer
+
+# Project folder
+audio/
+uploads/
+*.wav
+*.mp3
+*.mp4
+
+# pyflow
+__pypackages__/
+
+# Environment
+.env
+config/*
+config/
+.venv
+env/
+venv/
+venv/*
+ENV/
+env.bak/
+venv.bak/
+
+# If you are using PyCharm #
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/dictionaries
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.xml
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+.idea/**/gradle.xml
+.idea/**/libraries
+*.iws /out/
+
+# Sublime Text
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace
+*.sublime-project
+
+
+# Logs
+*.log
+**/*.log
+.cache/
+**/.cache/
+
+# Byte-compiled
+
+__pycache__/
+__pycache__
+.idea/
+# VSCode
+.vscode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+# Local History for Visual Studio Code
+.history/
+# Built Visual Studio Code Extensions
+*.vsix
+
