@@ -11,6 +11,8 @@
 ## Auto-reloading a Flask application
 - Use the --debug option when you run your Flask app to enable debug mode
 - `flask --app example_app.py --debug run`
+- `flask --app main.py --debug run -h localhost`
+- `flask run -h localhost`
 
 ### Flask 2.2
 - We needed to set the FLASK_APP and FLASK_ENV=development environment variables.
@@ -32,3 +34,13 @@ curl \
 
 ## Query string arguments in REST APIs
 http://127.0.0.1:5000/transcribe?fName=Ran&lName=Itzhak
+
+# Docker
+- `docker build . -t <new_image_name> `
+- `docker container run --name new_container_name -t -d image_name`
+```
+docker container run -d \
+    --name container_flask_rest_api -it \
+    -p 5000:5000 \
+    flask_rest_api
+```
