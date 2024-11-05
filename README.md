@@ -19,3 +19,16 @@
 - `export FLASK_ENV=development`
 - `flask run`
 - It is still possible to set FLASK_APP and FLASK_DEBUG=1 in Flask 2.2.
+
+
+# POST an mp3 file using CURL
+```
+curl \
+  -F "audio_file_id=1" \
+  -F "file_comment=This is an audio file comment" \
+  -F "file_name=@/Users/eli/Desktop/www/audio/roses.mp3; type=audio/mpeg" \
+  http://127.0.0.1:5000/transcribe
+```
+
+## Query string arguments in REST APIs
+http://127.0.0.1:5000/transcribe?fName=Ran&lName=Itzhak
