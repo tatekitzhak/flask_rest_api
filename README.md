@@ -1,11 +1,52 @@
 # flask_rest_api
 
+# The app tree directory
 ```
-├── flask_hello_world
-           ├── app
-           │   ├── __init__.py
-           │   └── routes.py
-           └── run.py
+├── flask_rest_api
+        ├── config.py
+        ├── docker-compose.yml
+        ├── Dockerfile
+        ├── .dockerignore
+        ├── .gitignore
+        ├── 
+        ├── README.md
+        ├── requirements.txt
+        ├── run.py
+        ├── app
+        │   ├── api
+        │   │   ├── errors.py
+        │   │   ├── __init__.py
+        │   │   ├── skills.py
+        │   │   └── validations.py
+        │   ├── auth
+        │   │   ├── emails.py
+        │   │   ├── __init__.py
+        │   │   ├── oauth.py
+        │   │   └── routes.py
+        │   ├── content
+        │   │   ├── forms.py
+        │   │   ├── __init__.py
+        │   │   └── routes.py
+        │   ├── deepspeech-ffmpeg
+        │   │   ├── 
+        │   │   ├── 
+        │   │   └── routes.py
+        │   ├── errors
+        │   │   ├── handlers.py
+        │   │   └── __init__.py
+        │   ├── extract-audio-from-yt
+        │   │   ├── handlers.py
+        │   │   └── __init__.py
+        │   ├── __init__.py
+        │   ├── main
+        │   │   ├── __init__.py
+        │   │   └── routes.py
+        │   ├── models.py
+        │   ├── static        
+        │   └── templates    
+        ├── skills.db
+        └── tests
+
 ```
 
 ## Auto-reloading a Flask application
@@ -28,7 +69,7 @@
 curl \
   -F "audio_file_id=1" \
   -F "file_comment=This is an audio file comment" \
-  -F "file_name=@/Users/eli/Desktop/www/audio/roses.mp3; type=audio/mpeg" \
+  -F "file_name=@/Users/ran/Desktop/duration-24-13minutes1.wav; type=audio/mpeg" \
   http://127.0.0.1:5000/transcribe
 ```
 
