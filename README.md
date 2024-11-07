@@ -69,9 +69,10 @@
 curl \
   -F "audio_file_id=1" \
   -F "file_comment=This is an audio file comment" \
-  -F "file_name=@/Users/ran/Desktop/duration-24-13minutes1.wav; type=audio/mpeg" \
+  -F "file_name=@/Users/eli/Desktop/www/audio/manythings-US-History-Series-Jefferson-Is-Elected-President-in-1800-But-Only-on-the-36th-Vote.mp3; type=audio/mpeg" \
   http://127.0.0.1:5000/transcribe
 ```
+- `curl -X POST -H "application/json" -d '{"key":"val"}' UR`
 
 ## Query string arguments in REST APIs
 http://127.0.0.1:5000/transcribe?fName=Ran&lName=Itzhak

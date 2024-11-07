@@ -1,6 +1,6 @@
 from app import app
 # from markupsafe import escape
-from flask import url_for, request
+from flask import url_for, request, jsonify
 
 
 @app.route('/')
@@ -25,7 +25,7 @@ def upload_file():
 def get_text(post_id):
 
     if request.method == 'PUT':
-        data = request.get_json()
+
         topic1 = data['topic1']
         topic2 = data['topic2']
 
@@ -34,3 +34,21 @@ def get_text(post_id):
     else:
         # return {'message': f'parm_req {post_id} updated successfully', 'method': {request.method}}, 200
         return {'message': f'User {post_id} updated successfully', 'method': f'{request.method}'}, 200
+
+
+@app.errorhandler(404)
+def not_found():
+    """Page not found."""
+    return jsonify({'message': 'Error', 'method': f'{request.method}'}), 404
+
+
+@app.errorhandler(400)
+def bad_request():
+    """Bad request."""
+    return jsonify({'message': 'Error', 'method': f'{request.method}'}), 400
+
+
+@app.errorhandler(500)
+def server_error():
+    """Internal server error."""
+    return jsonify({'message': 'Error', 'method': f'{request.method}'}), 500
